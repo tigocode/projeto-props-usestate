@@ -1,0 +1,65 @@
+.container_principal {
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+}
+
+.container_principal header {
+  width: 100%;
+  padding: 40px 10px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 30px;
+  border-bottom: 1px solid gray;
+  color: black;
+}
+
+.container_principal header button {
+  width: 200px;
+  border: 2px solid black;
+  border-radius: 20px;
+  font-size: 16px;
+  font-weight: 600;
+  padding: 10px 15px;
+  cursor: pointer;
+  background-color: white;
+}
+
+.container_principal main {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-around;
+  padding: 40px 0px;
+}
+
+.card_animal img {
+  width: 300px;
+  height: 300px;
+  border-radius: 8px;
+  border: 5px solid black;
+}
+
+.card_informacao {
+  width: 300px;
+  padding: 20px 10px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 25px;
+  border: 5px solid black;
+  border-radius: 8px;
+  color: black;
+  font-weight: 600;
+  margin-top: 40px;
+}
+
+.card_informacao p {
+  width: 80%;
+}
