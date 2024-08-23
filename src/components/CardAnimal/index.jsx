@@ -1,10 +1,15 @@
-import  Image from 'next/image';
+import Image from 'next/image';
 import styles from './CardAnimal.module.css';
 
+import imagemCachorro from "../../../public/cachorro.jpg";
+import imagemGato from "../../../public/gato.jpg";
+
 export default function CardAnimal(props) {
-  return(
+  return (
     <div className={styles.card_animal}>
-      <Image src={props.imagemAnimal} alt="ANIMAL" />
+      <Image
+        src={props.tipoAnimal === 'cachorro' ? imagemCachorro : imagemGato} alt="ANIMAL"
+      />
     </div>
   );
 }

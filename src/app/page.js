@@ -1,18 +1,11 @@
 'use client';
 import { useState } from "react";
-import Image from "next/image";
 import estilos from "./page.module.css";
-import imagemCachorro from "/public/cachorro.jpg";
-import imagemGato from "/public/gato.jpg";
 
 import CardAnimal from "@/components/CardAnimal";
 import CardInformacoes from "@/components/CardInformacoes";
 
 export default function Home() {
-  let imagemAnimal = "";
-  let informacaoAnimal = "";
-  let tipoAnimal = "Cachorro";
-
   const [tipoDoComponenteCard, setTipoDoComponenteCard] = useState("cachorro");
 
   const alterarState = () => {
@@ -21,16 +14,6 @@ export default function Home() {
     } else {
       setTipoDoComponenteCard("cachorro");
     }
-  };
-
-  if (tipoDoComponenteCard === "cachorro") {
-    imagemAnimal = imagemCachorro;
-    informacaoAnimal = "É um mamífero carnívoro da família dos canídeos.";
-    tipoAnimal = "Cachorro";
-  } else {
-    imagemAnimal = imagemGato;
-    informacaoAnimal = "É um mamífero carnívoro da família dos felídeos.";
-    tipoAnimal = "Gato";
   }
 
   return (
@@ -45,13 +28,12 @@ export default function Home() {
       {/* Compomente CardAnimal */}
       <main>
         <CardAnimal
-          imagemAnimal={imagemAnimal}
+          tipoAnimal={tipoDoComponenteCard}
         />
 
         {/* Componente CardInformacoes */}
         <CardInformacoes
-          tipoAnimal={tipoAnimal}
-          informacaoAninal={informacaoAnimal}
+          tipoAnimal={tipoDoComponenteCard}
         />
       </main>
     </div>
