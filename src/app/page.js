@@ -5,6 +5,9 @@ import estilos from "./page.module.css";
 import imagemCachorro from "/public/cachorro.jpg";
 import imagemGato from "/public/gato.jpg";
 
+import CardAnimal from "@/components/CardAnimal";
+import CardInformacoes from "@/components/CardInformacoes";
+
 export default function Home() {
   let imagemAnimal = "";
   let informacaoAnimal = "";
@@ -41,15 +44,15 @@ export default function Home() {
 
       {/* Compomente CardAnimal */}
       <main>
-        <div className={estilos.card_animal}>
-          <Image src={imagemAnimal} alt="animal" />
-        </div>
+        <CardAnimal
+          imagemAnimal={imagemAnimal}
+        />
 
         {/* Componente CardInformacoes */}
-        <div className={estilos.card_informacao}>
-          <h3>Informação sobre o {tipoAnimal}</h3>
-          <p>{informacaoAnimal}</p>
-        </div>
+        <CardInformacoes
+          tipoAnimal={tipoAnimal}
+          informacaoAninal={informacaoAnimal}
+        />
       </main>
     </div>
   );

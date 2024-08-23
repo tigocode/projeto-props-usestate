@@ -1,0 +1,18 @@
+.card_informacao {
+  width: 300px;
+  padding: 20px 10px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 25px;
+  border: 5px solid black;
+  border-radius: 8px;
+  color: black;
+  font-weight: 600;
+  margin-top: 40px;
+}
+
+.card_informacao p {
+  width: 80%;
+}
